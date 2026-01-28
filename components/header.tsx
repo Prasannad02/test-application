@@ -24,6 +24,7 @@ export default function Header({ onLogout, isLoggedIn }: HeaderProps) {
             </button>
             {isLoggedIn && (
               <button
+                data-testid="logout-btn"
                 onClick={onLogout}
                 className="text-xs px-3 py-1.5 rounded hover:bg-secondary text-muted-foreground"
               >

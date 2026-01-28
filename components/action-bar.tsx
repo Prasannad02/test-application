@@ -13,6 +13,7 @@ export default function ActionBar({
     <div className="flex gap-4 flex-wrap">
       <div className="flex-1 flex gap-2">
         <button
+          data-testid="save-profile-btn"
           onClick={onSaveProfile}
           className="px-4 py-2 bg-primary text-primary-foreground rounded font-medium hover:bg-primary/90 transition-colors"
         >
@@ -25,6 +26,7 @@ export default function ActionBar({
 
       <div className="flex-1 flex gap-2">
         <button
+          data-testid="save-access-btn"
           onClick={onSaveAccess}
           className="px-4 py-2 bg-primary text-primary-foreground rounded font-medium hover:bg-primary/90 transition-colors"
         >
