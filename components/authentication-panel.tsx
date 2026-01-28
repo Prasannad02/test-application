@@ -31,6 +31,7 @@ export default function AuthenticationPanel({
             </label>
             <input
               id="user_login"
+              data-testid="login-email"
               type="email"
               value={email}
               onChange={(e) => onEmailChange(e.target.value)}
@@ -47,6 +48,7 @@ export default function AuthenticationPanel({
             </label>
             <input
               id="pwd"
+              data-testid="login-password"
               type="password"
               name="pwd"
               value={password}
@@ -58,19 +60,21 @@ export default function AuthenticationPanel({
         </div>
 
         {validationError && (
-          <div className="text-sm text-destructive font-medium">
+          <div data-testid="validation-error" className="text-sm text-destructive font-medium">
             {validationError}
           </div>
         )}
 
         <div className="flex gap-3 pt-4">
           <button
+            data-testid="sign-in-btn"
             onClick={onSignIn}
             className="px-4 py-2 bg-primary text-primary-foreground rounded font-medium hover:bg-primary/90 transition-colors"
           >
             Sign In
           </button>
           <button
+            data-testid="reset-password-btn"
             onClick={onReset}
             className="px-4 py-2 border border-border rounded font-medium text-foreground hover:bg-secondary transition-colors"
           >

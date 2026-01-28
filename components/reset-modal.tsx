@@ -36,6 +36,7 @@ export default function ResetModal({
             </label>
             <input
               id="modal-email"
+              data-testid="reset-confirm-email"
               type="email"
               value={confirmEmail}
               onChange={(e) => setConfirmEmail(e.target.value)}
@@ -46,6 +47,7 @@ export default function ResetModal({
 
           <div className="flex gap-3 pt-4">
             <button
+              data-testid="reset-confirm-btn"
               onClick={handleConfirm}
               className="flex-1 px-4 py-2 bg-primary text-primary-foreground rounded font-medium hover:bg-primary/90 transition-colors"
             >
